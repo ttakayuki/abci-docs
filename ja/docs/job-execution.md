@@ -114,9 +114,9 @@ ABCIシステムには、次の資源タイプが用意されています。
 
 | サービス名 | ノード時間積の最大値 |
 |:--|--:|
-| On-demand                                     |    12 nodes &middot; hours |
-| Spot(計算ノード(V))                           | 43008 nodes &middot; hours |
-| Spot(計算ノード(A))                           |  2304 nodes &middot; hours |
+| On-demand | 12 nodes &middot; hours |
+| Spot(計算ノード(V)) | 43008 nodes &middot; hours |
+| Spot(計算ノード(A)) | 2304 nodes &middot; hours |
 
 !!! note
     Reservedサービスでは経過時間に制限はありませんが、予約の終了と共にジョブは強制終了します。
