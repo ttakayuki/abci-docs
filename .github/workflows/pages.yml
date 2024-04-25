@@ -42,8 +42,8 @@ jobs:
       - name: Build document
         run: |
           mkdocs build --config-file ./root/mkdocs.yml --site-dir "${GITHUB_WORKSPACE}/site"
-          mkdocs build --config-file ./ja/mkdocs.yml   --site-dir "${GITHUB_WORKSPACE}/site/ja/""
-          mkdocs build --config-file ./en/mkdocs.yml   --site-dir "${GITHUB_WORKSPACE}/site/en/""
+          mkdocs build --config-file ./ja/mkdocs.yml   --site-dir "${GITHUB_WORKSPACE}/site/ja/"
+          mkdocs build --config-file ./en/mkdocs.yml   --site-dir "${GITHUB_WORKSPACE}/site/en/"
           
           mkdocs build --config-file ./portal/root/mkdocs.yml --site-dir "${GITHUB_WORKSPACE}/site/portal/"
           mkdocs build --config-file ./portal/ja/mkdocs.yml   --site-dir "${GITHUB_WORKSPACE}/site/portal/ja/"
