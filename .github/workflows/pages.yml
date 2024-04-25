@@ -10,6 +10,11 @@ on:
     branches:
       - 'master'
       - 'devel-*'
+    paths:
+      - 'en/**'
+      - 'ja/**'
+      - 'portal/**'
+      - 'root/**'
 
 concurrency:
   group: "pages"
