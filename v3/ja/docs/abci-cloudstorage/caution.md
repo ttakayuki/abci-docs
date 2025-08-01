@@ -1,14 +1,14 @@
 # クラウドストレージ ご利用時の注意
 
-## マルチパートアップロード（MPU）失敗時について {#notice-mpu-fail}
+## マルチパートアップロード(MPU)失敗時について {#notice-mpu-fail}
 
-Multipart Upload (MPU) を使用したデータアップロードに失敗した場合に、一時領域にデータが残ったままになります。データのアップロードの中断や失敗が起き、以下に当てはまる場合には、[こちら](usage.md#abort-mpu) を確認し、途中となっている MPU を完全に停止させて下さい。
+Multipart Upload (MPU)を使用したデータアップロードに失敗した場合に、一時領域にデータが残ったままになります。データのアップロードの中断や失敗が起き、以下に当てはまる場合には、[MPU の中止](usage.md#abort-mpu)を確認し、途中となっているMPUを完全に停止させて下さい。
 
-* 使用しているクライアントツール（AWS CLI や s3cmd）が定義する、MPU が自動的に有効になる程の大きなデータをアップロードした。
+* 使用しているクライアントツール(AWS CLI や s3cmd)が定義する、MPU が自動的に有効になる程の大きなデータをアップロードした。
 * クライアントツールのプロセスを強制停止するなど、データのアップロードを中断したり、クライアントツールが意図せずに停止したりした。
 
 !!! note
-    MPU 自動でが有効となるデータサイズは、AWS CLI ではデフォルトで [8MB](https://docs.aws.amazon.com/cli/latest/topic/s^Z^Z3-config.html#multipart-threshold) 、s3cmd では [15MB](https://s3tools.org/kb/item13.htm)と定義されています
+    MPU 自動でが有効となるデータサイズは、AWS CLIではデフォルトで [8MB](https://docs.aws.amazon.com/cli/latest/topic/s3-config.html#multipart-threshold)、s3cmdでは[15MB](https://s3tools.org/kb/item13.htm)と定義されています
 
 ### MPU の失敗の詳細
 
@@ -18,4 +18,4 @@ MPU を使用したデータのアップロードでは、分割されたデー�
 
 AWS CLI では、CTRL-C を用いてクライアントとサーバ間の動作を停止してもこの問題は発生しませんが、予期せぬクライアントの強制終了、通信切断などによって同じことが起きる可能性があります。
 
-MPU が失敗した時、一時領域に保存されたデータが残ったままになります。利用者自身が手動で MPU を完全に中止する必要があります。MPUの中止手順は、[こちら](usage.md#abort-mpu)を参照してください。
+MPU が失敗した時、一時領域に保存されたデータが残ったままになります。利用者自身が手動で MPU を完全に中止する必要があります。MPUの中止手順は、[MPU の中止](usage.md#abort-mpu)を参照してください。
